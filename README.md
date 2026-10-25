@@ -2,7 +2,8 @@
 
 SeeForMe lets a blind or low-vision person take or upload a photo, ask questions about it by typing or speaking, and hear the answer. It says **"I'm not sure"** out loud when it isn't, and it **refuses advice a photo can't support** (such as medicine doses). It runs entirely on one laptop using a small open vision-language model.
 
-> Course project (multimodal AI, accessibility track). Team: [Member 1 Goutham], [Member 2], [Member 3], [Member 4], [Member 5]. Contributions are described in each member's private statement.
+> Course project: Generative AI with LLM, October 2026 (multimodal AI, accessibility track). Team: Sindhuja, Goutham, Samyak, Kartikeya, Swetha. Contributions are described in each member's private statement.
+> Code: https://github.com/GOUTHAM9955/seeforme
 
 [Screenshot of the app: add `docs/screenshot.png` and link it here]
 
@@ -100,7 +101,7 @@ app/        web server and the browser page
 core/       model call, prompts, safety rules, photo check, sessions
 eval/       dataset selection, run and score scripts, frozen item lists, results
 tests/      unit tests and a smoke test
-docs/       design doc, ethics, results, failure log, slide decks and talk scripts
+docs/       design doc, ethics, results, failure log and talk scripts
 run.sh      one-command start
 ```
 

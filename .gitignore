@@ -6,3 +6,7 @@ __pycache__/
 node_modules/
 eval/data/
 eval/review.html
+
+# Slide decks are kept out of the repo
+docs/*.pptx
+docs/deck/
