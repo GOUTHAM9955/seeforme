@@ -33,7 +33,7 @@ The numbers printed in the slide footers for slides 9 to 12 (10, 11, 12, 9) don'
 2. Slide 10 (failures), Invented meaning card. Replace "Fix: describe only what is readable." with: **"Fix: confidence is capped on blurry photos. The prompt alone didn't stop it."** That is what our fair comparison showed.
 3. Slide 9 (evaluation): "12 separate items for tuning" is really 11 usable (one had a cut-off question). Say "12 selected, 11 usable".
 4. Slide 5 label "frozen": see Goutham's note on this below. It is true for us, with one nuance.
-5. Every TBD box is waiting for the test run or a screenshot.
+5. Test-run numbers are final (24 of 30, 0 confident wrong on high-risk, 43 s). Only the screenshots (slides 7 and 12) are still to add.
 
 ---
 
@@ -80,7 +80,7 @@ The numbers printed in the slide footers for slides 9 to 12 (10, 11, 12, 9) don'
 
 **Likely questions:**
 - *Why only 3B?* It's what runs on this laptop with the photo kept private. It reads printed text well but is sometimes confidently wrong, which is why the rules exist.
-- *Did you fine-tune?* No. The brief's stretch idea is few-shot prompting, not training. [If you ran it: result.]
+- *Did you fine-tune?* No. The brief's stretch idea is few-shot prompting, not training. We did not run it.
 - *Why is the first answer slow?* The model must read about 1,100 image tokens; later questions reuse that work.
 - *How do you know the confidence is any good?* We don't trust it blindly. We report the wrong-rate by stated confidence, and the safety rules don't depend on it.
 
