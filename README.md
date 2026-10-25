@@ -5,7 +5,7 @@ SeeForMe lets a blind or low-vision person take or upload a photo, ask questions
 > Course project: Generative AI with LLM, October 2026 (multimodal AI, accessibility track). Team: Sindhuja, Goutham, Samyak, Kartikeya, Swetha. Contributions are described in each member's private statement.
 > Code: https://github.com/GOUTHAM9955/seeforme
 
-[Screenshot of the app: add `docs/screenshot.png` and link it here]
+![SeeForMe answering a question about a medicine bottle: a confident answer, a line asking the user to verify with a pharmacist, and a Read aloud button](docs/screenshot.png)
 
 ## What it does
 
