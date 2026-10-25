@@ -1,0 +1,6 @@
+{
+ "model": "qwen2.5vl:3b",
+ "max_side": 768,
+ "prompt_sha": "29d4fc011b33",
+ "started": "2026-10-24 17:11:15"
+}

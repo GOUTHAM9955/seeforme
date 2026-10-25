@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>SeeForMe</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%232446c8'/%3E%3Cpath d='M3 12s3.5-6 9-6 9 6 9 6-3.5 6-9 6-9-6-9-6z' fill='none' stroke='white' stroke-width='1.8'/%3E%3Ccircle cx='12' cy='12' r='2.6' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <a class="skip" href="#question">Skip to the question box</a>
+
+  <header class="app-header">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="currentColor"/><path d="M3 12s3.5-6 9-6 9 6 9 6-3.5 6-9 6-9-6-9-6z" fill="none" stroke="var(--on-brand)" stroke-width="1.8"/><circle cx="12" cy="12" r="2.6" fill="var(--on-brand)"/></svg>
+      <h1>SeeForMe</h1>
+    </div>
+    <div class="header-actions">
+      <span class="pill private" title="Your photo and the AI stay on this computer">Runs on this computer</span>
+      <button id="open-help" class="icon-btn" type="button" aria-label="Help and tips">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.6 2.2c-.8.5-1.1 1-1.1 1.8M12 16.8v.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <button id="open-settings" class="icon-btn" type="button" aria-label="Settings">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h2M10 17h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="7" r="2.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="8" cy="17" r="2.2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div id="banner" class="banner" role="alert" hidden></div>
+
+  <main class="layout" id="main">
+    <!-- LEFT: the photo -->
+    <section class="photo-pane" aria-labelledby="photo-h">
+      <h2 id="photo-h" class="pane-title">Your photo</h2>
+
+      <div id="empty" class="dropzone">
+        <svg class="drop-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="9" cy="10.5" r="1.8" fill="currentColor"/><path d="M4 17l5-4 3 2.5 4-4 4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <p class="drop-title">Show me something</p>
+        <div class="btn-stack">
+          <button id="camera-open" class="btn primary big" type="button">Use the camera</button>
+          <button id="pick" class="btn big" type="button">Choose a photo</button>
+        </div>
+        <input id="file" type="file" accept="image/*" hidden>
+        <p class="hint">or drop an image here, or paste one with ⌘V</p>
+        <div class="samples">
+          <p id="samples-label" class="mini-title">Try an example</p>
+          <div id="samples" role="group" aria-labelledby="samples-label"></div>
+        </div>
+      </div>
+
+      <figure id="loaded" class="photo-card" hidden>
+        <div class="photo-frame">
+          <img id="preview" alt="Your photo">
+          <span id="quality" class="pill quality" aria-live="polite"></span>
+        </div>
+        <figcaption>
+          <button id="camera-again" class="btn" type="button">Retake with camera</button>
+          <button id="change" class="btn" type="button">Choose another</button>
+          <button id="clear" class="btn quiet" type="button">Start over</button>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- RIGHT: the conversation -->
+    <section class="chat-pane" aria-labelledby="chat-h">
+      <h2 id="chat-h" class="pane-title">Conversation</h2>
+
+      <div id="log" role="log" aria-live="polite" aria-label="Conversation">
+        <div id="welcome" class="welcome">
+          <p class="welcome-title">Ask anything about your photo.</p>
+          <p>Add a photo on the left, then type or speak a question, like:</p>
+          <ul>
+            <li>“What does this label say?”</li>
+            <li>“Is there an expiry date?”</li>
+            <li>“What colour is it?”</li>
+          </ul>
+          <p class="hint">I can be wrong. For medicines, allergies and appliances, always double-check with a person.</p>
+        </div>
+      </div>
+
+      <div id="thinking" class="thinking" hidden aria-hidden="true">
+        <span class="dots"><i></i><i></i><i></i></span>
+        <span id="stage">Looking at your photo…</span>
+        <span class="elapsed"><span id="elapsed">0</span> s</span>
+        <button id="cancel" class="btn quiet" type="button">Cancel</button>
+        <p id="slow" class="slow-note" hidden>This is taking longer than usual. Your computer is probably low on memory. Closing Chrome and other apps usually helps a lot.</p>
+      </div>
+
+      <div class="dock">
+        <div id="quick" class="quick" role="group" aria-label="Suggested questions" hidden></div>
+
+        <div id="speaking" class="speaking" hidden>
+          <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <span>Speaking…</span>
+          <button id="stop" class="btn quiet" type="button">Stop (Esc)</button>
+        </div>
+
+        <form id="form" class="composer" autocomplete="off">
+          <label for="question" class="sr-only">Your question</label>
+          <input id="question" type="text" maxlength="500" placeholder="Ask about your photo…" disabled>
+          <button id="mic" class="round" type="button" aria-pressed="false" aria-label="Speak your question" disabled>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3" fill="currentColor"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <button id="ask" class="btn primary send" type="submit" disabled>Ask</button>
+        </form>
+        <p class="hint tiny" id="mic-hint">Option+M to speak · Option+R to hear the last answer again · Esc to stop</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Camera with spoken guidance -->
+  <dialog id="camera" aria-labelledby="camera-h" class="camera-dialog">
+    <div class="cam-wrap">
+      <h2 id="camera-h" class="sr-only">Camera</h2>
+      <div class="cam-view">
+        <video id="cam-video" playsinline muted autoplay></video>
+        <div class="cam-frame" aria-hidden="true"></div>
+      </div>
+      <p id="cam-guide" class="cam-guide" data-state="warn">Starting the camera…</p>
+      <div class="cam-actions">
+        <button id="cam-capture" class="btn primary big" type="button">Take photo now</button>
+        <button id="cam-cancel" class="btn big" type="button">Cancel</button>
+      </div>
+      <p class="hint">Hold the item about a hand's length away, with the text facing the camera. I'll tell you how to adjust, and take the photo by myself when it looks sharp. You can also press Space.</p>
+    </div>
+  </dialog>
+
+  <!-- Settings -->
+  <dialog id="settings" aria-labelledby="settings-h">
+    <form method="dialog" class="sheet">
+      <h2 id="settings-h">Settings</h2>
+
+      <fieldset>
+        <legend>Voice</legend>
+        <label class="row-field"><input id="speech" type="checkbox"> Read answers aloud automatically</label>
+        <label class="row-field">Speed
+          <select id="rate"><option value="0.8">Slow</option><option value="1">Normal</option><option value="1.3">Fast</option></select>
+        </label>
+        <label class="row-field">Voice
+          <select id="voice"><option value="">Automatic (recommended)</option></select>
+        </label>
+        <label class="row-field"><input id="autosend" type="checkbox"> Send my question as soon as I stop speaking</label>
+        <label class="row-field"><input id="handsfree" type="checkbox"> Hands-free: listen again after each spoken answer</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Display</legend>
+        <label class="row-field">Text size
+          <input id="size" type="range" min="16" max="28" step="2">
+        </label>
+        <label class="row-field">Theme
+          <select id="theme"><option value="auto">Match my Mac</option><option value="light">Light</option><option value="dark">Dark</option><option value="contrast">High contrast</option></select>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Screen reader</legend>
+        <label class="row-field"><input id="sr-mode" type="checkbox"> I use VoiceOver or another screen reader (turns off the automatic voice)</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Privacy</legend>
+        <p class="hint">Your photo and the AI model stay on this computer, and nothing is saved. Voice input is the one exception: it is handled by your browser's speech service (Safari uses Apple's, Chrome uses Google's).</p>
+      </fieldset>
+
+      <div class="sheet-actions"><button class="btn primary" value="close">Done</button></div>
+    </form>
+  </dialog>
+
+  <!-- Help -->
+  <dialog id="help" aria-labelledby="help-h">
+    <form method="dialog" class="sheet">
+      <h2 id="help-h">How SeeForMe works</h2>
+      <ol>
+        <li>Add a photo: choose one, drop it in, or paste it.</li>
+        <li>Ask a question by typing or speaking.</li>
+        <li>I answer in a sentence and tell you how sure I am.</li>
+      </ol>
+      <h3>Taking a good photo</h3>
+      <ul>
+        <li>Hold the camera about 20–30 cm (a hand's length) from labels.</li>
+        <li>Use good light and avoid glare on shiny packaging.</li>
+        <li>Hold the item flat and steady, with the text facing the camera.</li>
+        <li>If I say I'm not sure, take another photo from a different angle.</li>
+      </ul>
+      <h3>What I will and won't do</h3>
+      <ul class="safety-list">
+        <li><b>I will</b> read what is printed or visible and say how sure I am.</li>
+        <li><b>I will</b> say "I'm not sure" and suggest a retake instead of guessing.</li>
+        <li><b>I won't</b> tell you how much medicine to take, or whether something is safe to take or eat. Ask a pharmacist, doctor or someone you trust.</li>
+        <li><b>I won't</b> promise that a stove, heater or iron is off. A photo can't prove it.</li>
+        <li><b>I won't</b> follow instructions written inside a photo.</li>
+        <li>When a safety rule applies, you'll see a 🛡 line on the answer that says which one.</li>
+      </ul>
+      <h3>Keyboard shortcuts</h3>
+      <ul>
+        <li><kbd>Option</kbd>+<kbd>M</kbd> speak your question</li>
+        <li><kbd>Option</kbd>+<kbd>R</kbd> hear the last answer again</li>
+        <li><kbd>/</kbd> jump to the question box</li>
+        <li><kbd>Esc</kbd> stop speaking</li>
+      </ul>
+      <h3>Please remember</h3>
+      <p>I can make mistakes, and you may not be able to check. For medicine, food allergies, cooking appliances and anything safety-related, ask a person to confirm.</p>
+      <div class="sheet-actions"><button class="btn primary" value="close">Got it</button></div>
+    </form>
+  </dialog>
+
+  <p id="status" class="sr-only" aria-live="polite"></p>
+  <script src="/static/app.js"></script>
+</body>
+</html>

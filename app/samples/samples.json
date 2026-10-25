@@ -1,0 +1,8 @@
+[
+  {"file": "VizWiz_val_00000001.jpg", "title": "Medicine bottle", "question": "Can you tell me what this medicine is please?"},
+  {"file": "VizWiz_val_00000153.jpg", "title": "Medicine, second photo", "question": "Which medicine is this?"},
+  {"file": "VizWiz_val_00000045.jpg", "title": "Bus pass", "question": "What is the expiration date on this bus pass?"},
+  {"file": "VizWiz_val_00000390.jpg", "title": "Oven label", "question": "Please tell me the model number from this label on this oven."},
+  {"file": "VizWiz_val_00000091.jpg", "title": "Disc label", "question": "What does the small label on this disc say?"},
+  {"file": "VizWiz_val_00000147.jpg", "title": "Very blurry photo", "question": "Can you tell what's on this paper?"}
+]

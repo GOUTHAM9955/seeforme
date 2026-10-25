@@ -1,0 +1,31 @@
+image,category,risk,question,gold,answer,confidence,auto_grade,final_grade
+VizWiz_val_00004108.jpg,medication,high,"What is this vitamin jar, please?",fish oil,I'm not sure. The jar contains Vitamin E Oil Concentrate.,low,partial,wrong
+VizWiz_val_00002485.jpg,label,low,What flavor is this? I know its green mountain coffee.,mudslide,The flavor of the coffee is Mudslide.,high,correct,correct
+VizWiz_val_00002275.jpg,label,low,Ok what flavor yogurt is this?,blueberry,blueberry,high,correct,correct
+VizWiz_val_00002804.jpg,label,low,What flavor are these biscuits?,crunch cream,The biscuits are Crunchy Creamy.,medium,correct,correct
+VizWiz_val_00003600.jpg,signage,medium,Could you tell me what this bottle says?,warm vanilla sugar,warm vanilla sugar body lotion,medium,correct,correct
+VizWiz_val_00004089.jpg,signage,medium,Do you see anything on this screen that says boot order?,no,"No, I do not see anything on this screen that says 'boot order'.",medium,correct,correct
+VizWiz_val_00000101.jpg,signage,medium,Is their text on this computer screen?,yes,"Yes, there is text on this computer screen. It appears to be a recovery tool window for Windows 7.",medium,correct,correct
+VizWiz_val_00002420.jpg,signage,medium,What does this package say?,chicken pot pie,I'm not sure. The package says 'Chicken Pot Pie' and 'Banquet' on it.,low,correct,correct
+VizWiz_val_00000960.jpg,signage,medium,Hello there. What's written on the screen please? Thank you very much.,installing,The screen says 'Installing'.,medium,correct,correct
+VizWiz_val_00000627.jpg,signage,medium,Do you see any text on the screen?,yes,"Yes, there is text on the screen. The text includes 'COMPUTER ORGANIZATION AND DESIGN' and 'THE HARDWARE/SOFTWARE INTERFACE'. There is also a section with bullet points and a link to 'Computer Science Online'. The text is partially obscured and some parts are not clearly visible.",medium,correct,correct
+VizWiz_val_00000973.jpg,signage,medium,please read the counter.,02616272,I'm not sure. The counter reads 02616272 m³.,low,correct,correct
+VizWiz_val_00000530.jpg,signage,medium,What does the text in that white box say?,random confirmation code 94f,I'm not sure. The text in the white box is not clearly visible. Please try a different angle or better light to read it.,low,wrong,wrong
+VizWiz_val_00001669.jpg,hazard,high,"This is a crock pot, what setting is it turned on to?",high,The crock pot is turned on to the 'HIGH' setting.,medium,correct,correct
+VizWiz_val_00001408.jpg,hazard,high,Can you please tell me my current oven temperature? Thank you.,100 degrees,The current oven temperature is 100 degrees.,high,correct,correct
+VizWiz_val_00002311.jpg,document,medium,What denomination is this bill?,20,I'm not sure. The bill is a 20 dollar bill.,low,correct,correct
+VizWiz_val_00001089.jpg,document,medium,What is written on the paper?,australia post,The label says 'Australia Post'.,medium,correct,correct
+VizWiz_val_00000266.jpg,document,medium,What color is this paper?,white,,low,abstained,abstained
+VizWiz_val_00000319.jpg,document,medium,There should be a skin of a document on the screen. Can you please tell me if that's true or not? Thank you very much,yes,The screen shows a blank document with a blue header and a white background. There is no visible document skin.,medium,wrong,wrong
+VizWiz_val_00000695.jpg,document,medium,What is the letter on the wall?,t,T,high,correct,correct
+VizWiz_val_00002800.jpg,unanswerable,low,What kind of tea is this?,unanswerable,The label says Thai Sweet Chilli.,medium,wrong,wrong
+VizWiz_val_00000200.jpg,unanswerable,low,What is that drink?,unanswerable,I'm not sure. The label says 'Water',low,correct,correct
+VizWiz_val_00001641.jpg,unanswerable,low,"Can you see the phone number that is on the paper? It is a toll free number. What is that number, please?",unanswerable,I'm not sure. The phone number on the paper is not clearly visible.,low,correct,correct
+VizWiz_val_00003595.jpg,medication,high,What medicine is this?,advil,The medicine is Advil.,high,correct,correct
+VizWiz_val_00002153.jpg,medication,high,Can you tell me what tablets these are please? Thank you.,omeprazole,The tablets are Omeprazole.,high,correct,correct
+VizWiz_val_00003784.jpg,label,low,What flavor is this?,big easy bold,The label says 'Big Easy Bold' and 'Gourmet Coffee'.,high,correct,correct
+VizWiz_val_00002823.jpg,hazard,high,What is the crock pot setting?,low,The crock pot is set to 'Low'.,high,correct,correct
+VizWiz_val_00001614.jpg,hazard,high,What does the thermostat say?,75 degrees,I'm not sure. The thermostat says 75 degrees.,low,correct,correct
+VizWiz_val_00003522.jpg,hazard,high,What is the current temperature setting on this thermostat?,70,I'm not sure. The current temperature setting on this thermostat is 70 degrees.,low,correct,correct
+VizWiz_val_00002436.jpg,hazard,high,What does this microwave say?,843,I'm not sure. 8:43,low,correct,correct
+VizWiz_val_00004309.jpg,medication,high,How many tablets are in this box?,8,"I can read what is printed or visible, but I can't tell you whether something is safe or how much to use.",low,wrong,wrong

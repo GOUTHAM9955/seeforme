@@ -1,0 +1,255 @@
+[
+ {
+  "image": "VizWiz_val_00002347.jpg",
+  "question": "I turned the box to the next side. Can you tell me what type of vitamin pill this is? Thank you.",
+  "category": "medication",
+  "risk": "high",
+  "gold": "womens 1 daily",
+  "agreement_of_10": 5,
+  "all_answers": [
+   "once daily vitamin",
+   "woments 1 daily",
+   "womens 1 daily",
+   "whole food womens 1 daily",
+   "womens 1 daily",
+   "womens 1 daily",
+   "womens 1 daily",
+   "whole food womens 1 daily",
+   "book",
+   "womens 1 daily"
+  ],
+  "verified": true
+ },
+ {
+  "image": "VizWiz_val_00003232.jpg",
+  "question": "what flavor is this?",
+  "category": "label",
+  "risk": "low",
+  "gold": "salmon basil",
+  "agreement_of_10": 9,
+  "all_answers": [
+   "salmon basil",
+   "salmon basil",
+   "salmon basil",
+   "salmon basil",
+   "salmon basil",
+   "salmon basil",
+   "salmon",
+   "salmon basil",
+   "salmon basil",
+   "salmon basil"
+  ],
+  "verified": true
+ },
+ {
+  "image": "VizWiz_val_00001722.jpg",
+  "question": "What flavor are these pringles?",
+  "category": "label",
+  "risk": "low",
+  "gold": "thai sweet chili",
+  "agreement_of_10": 6,
+  "all_answers": [
+   "thai sweet chili",
+   "chai sweet chilu",
+   "chili",
+   "thai sweet chili",
+   "thai sweet chili",
+   "thai sweet chili",
+   "thai sweet chili",
+   "prngles flavor",
+   "thai sweet chili",
+   "thai sweet chilli"
+  ],
+  "verified": true
+ },
+ {
+  "image": "VizWiz_val_00000476.jpg",
+  "question": "Can you tell what this dialogue box says?",
+  "category": "signage",
+  "risk": "medium",
+  "gold": "no",
+  "agreement_of_10": 6,
+  "all_answers": [
+   "no",
+   "no",
+   "no",
+   "unanswerable",
+   "unanswerable",
+   "unanswerable",
+   "no",
+   "no",
+   "no",
+   "unanswerable"
+  ],
+  "verified": true
+ },
+ {
+  "image": "VizWiz_val_00002559.jpg",
+  "question": "What does, what does this say?",
+  "category": "signage",
+  "risk": "medium",
+  "gold": "heinz tomato ketchup",
+  "agreement_of_10": 8,
+  "all_answers": [
+   "heinz tomato ketchup",
+   "heinz tomato ketchup",
+   "heinz tomato ketchup",
+   "heinz tomato ketchup",
+   "heinz tomato ketchup",
+   "heinz tomato ketchup",
+   "heinz ketchup",
+   "heinz tomato ketchup",
+   "heinz tomato ketchup",
+   "tomato ketchup"
+  ],
+  "verified": true
+ },
+ {
+  "image": "VizWiz_val_00002247.jpg",
+  "question": "What is this on the paper?",
+  "category": "document",
+  "risk": "medium",
+  "gold": "braillele",
+  "agreement_of_10": 7,
+  "all_answers": [
+   "braillele",
+   "braillele",
+   "braillele",
+   "braille",
+   "braillele",
+   "braille",
+   "braillele",
+   "braille",
+   "braillele",
+   "braillele"
+  ],
+  "verified": true
+ },
+ {
+  "image": "VizWiz_val_00000758.jpg",
+  "question": "What three letter do I type to win the prize?",
+  "category": "document",
+  "risk": "medium",
+  "gold": "mvg",
+  "agreement_of_10": 9,
+  "all_answers": [
+   "mvg",
+   "search engine",
+   "mvg",
+   "mvg",
+   "mvg",
+   "mvg",
+   "mvg",
+   "mvg",
+   "mvg",
+   "mvg"
+  ],
+  "verified": true
+ },
+ {
+  "image": "VizWiz_val_00003383.jpg",
+  "question": "What kind of chips are those?",
+  "category": "unanswerable",
+  "risk": "low",
+  "gold": "unanswerable",
+  "agreement_of_10": 8,
+  "all_answers": [
+   "na",
+   "unanswerable",
+   "unanswerable",
+   "unanswerable",
+   "unanswerable",
+   "unanswerable",
+   "unanswerable",
+   "0",
+   "unanswerable",
+   "unanswerable"
+  ],
+  "verified": true
+ },
+ {
+  "image": "VizWiz_val_00004024.jpg",
+  "question": "Try to focus thi",
+  "category": "unanswerable",
+  "risk": "low",
+  "gold": "unanswerable",
+  "agreement_of_10": 8,
+  "all_answers": [
+   "cream",
+   "unanswerable",
+   "unanswerable",
+   "unanswerable",
+   "unanswerable",
+   "unanswerable",
+   "unanswerable",
+   "unanswerable",
+   "unanswerable",
+   "yes"
+  ],
+  "verified": true,
+  "invalid": "Question is truncated ('Try to focus thi'); the photo is readable, so 'unanswerable' is not a fair label."
+ },
+ {
+  "image": "VizWiz_val_00001096.jpg",
+  "question": "What does the screen say?",
+  "category": "signage",
+  "risk": "medium",
+  "gold": "your computer ran into problem",
+  "agreement_of_10": 4,
+  "all_answers": [
+   "computer error",
+   "error",
+   "unanswerable",
+   "your computer ran into problem",
+   "your computer ran into problem",
+   "computer will restart",
+   "your computer ran into problem",
+   "your computer ran into problem needs to",
+   "your computer ran into problem",
+   "your computer ran into problem collecting error infor will restart in 8 seconds"
+  ],
+  "verified": true
+ },
+ {
+  "image": "VizWiz_val_00003920.jpg",
+  "question": "Microwave say.",
+  "category": "hazard",
+  "risk": "high",
+  "gold": "318",
+  "agreement_of_10": 10,
+  "all_answers": [
+   "3:18",
+   "3:18",
+   "3:18",
+   "3:18",
+   "3:18",
+   "3:18",
+   "3:18",
+   "3:18",
+   "3:18",
+   "3:18"
+  ],
+  "verified": true
+ },
+ {
+  "image": "VizWiz_val_00003975.jpg",
+  "question": "What's the crock pot setting?",
+  "category": "hazard",
+  "risk": "high",
+  "gold": "high",
+  "agreement_of_10": 8,
+  "all_answers": [
+   "cup",
+   "high",
+   "high",
+   "high",
+   "high",
+   "high",
+   "low",
+   "high",
+   "high",
+   "high"
+  ],
+  "verified": true
+ }
+]

@@ -1,0 +1,12 @@
+image,category,risk,question,gold,answer,confidence,auto_grade,final_grade
+VizWiz_val_00002347.jpg,medication,high,I turned the box to the next side. Can you tell me what type of vitamin pill this is? Thank you.,womens 1 daily,The vitamin pill is a Whole Food Women's One Daily supplement.,high,correct,
+VizWiz_val_00003232.jpg,label,low,what flavor is this?,salmon basil,The flavor of the dish is salmon with basil.,high,correct,
+VizWiz_val_00001722.jpg,label,low,What flavor are these pringles?,thai sweet chili,The flavor of these Pringles is Thai Sweet Chilli.,high,correct,
+VizWiz_val_00000476.jpg,signage,medium,Can you tell what this dialogue box says?,no,"I'm not sure. The dialogue box is loading, with a progress bar and some text that is not fully visible.",low,wrong,
+VizWiz_val_00002559.jpg,signage,medium,"What does, what does this say?",heinz tomato ketchup,The label says 'HEINZ TOMATO KETCHUP 57 VARIETIES GROWN NORTH AMERICA Classic HEINZ KETCHUP'.,high,correct,
+VizWiz_val_00002247.jpg,document,medium,What is this on the paper?,braillele,,low,abstained,
+VizWiz_val_00000758.jpg,document,medium,What three letter do I type to win the prize?,mvg,MVG,high,correct,
+VizWiz_val_00003383.jpg,unanswerable,low,What kind of chips are those?,unanswerable,The label says Thai Sweet Chilli.,medium,wrong,
+VizWiz_val_00001096.jpg,signage,medium,What does the screen say?,your computer ran into problem,Your computer ran into a problem and needs to restart. It's collecting error info and will restart in 0 seconds.,high,correct,
+VizWiz_val_00003920.jpg,hazard,high,Microwave say.,318,The microwave is displaying the time 3:18.,high,correct,
+VizWiz_val_00003975.jpg,hazard,high,What's the crock pot setting?,high,Low and High,medium,correct,

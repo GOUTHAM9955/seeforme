@@ -1,0 +1,9 @@
+Pipeline frozen 2026-10-24 18:47 before the one-time test run
+Model: qwen2.5vl:3b, temperature 0, seed 42, conversation-id cache isolation
+c52e5ce2bf483b3ecda6beaf175a8881b208b436d9a6b3e3176cfcfa91c722b4  core/prompts.py
+3858e085ab120bd9969c400807c64697a5cb8607a9c92595ec0b3e54de70f13c  core/safety.py
+bfb71c292f25cab505b9501a773ab440ab830fb5684101f294602a9a125e0374  core/quality.py
+e9fef72d1b6358108e371334845c4c0cf1bc1c63c5c229cc86880dbc43bbffd9  core/vlm.py
+771c176acd79d8deea68edf08f4831c1fcc346361625a616ffed7b2bc851a224  eval/run_eval.py
+842d4fcb97566db16262ab760f281b985b39790da2708eee748b2bdff6f3dbb6  eval/score.py
+018a73e61339121293bd4019bbb4ea5e3ec82d462aae5aed0f5c745728528b6e  eval/test_items.json
