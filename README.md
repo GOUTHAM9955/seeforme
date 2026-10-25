@@ -101,7 +101,7 @@ app/        web server and the browser page
 core/       model call, prompts, safety rules, photo check, sessions
 eval/       dataset selection, run and score scripts, frozen item lists, results
 tests/      unit tests and a smoke test
-docs/       design doc, ethics, results, failure log and talk scripts
+docs/       design doc, ethics, results, and failure log
 run.sh      one-command start
 ```
 
